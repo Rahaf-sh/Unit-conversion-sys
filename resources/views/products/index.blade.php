@@ -43,10 +43,13 @@
                 @csrf
                 @method('DELETE')
                 <button type="submit" class="btn btn-danger">Delete</button>
+                <a class="btn btn-light show-total-units" data-id="{{$product->id}}">Total Units</a>
+                <a class="btn btn-light show-total-subunits"  data-id="{{$product->id}}">Total Subunits</a>
+
             </form>
         </td>
     </tr>
     @endforeach
 </table>
-
+@include('components.modal')
 @endsection
